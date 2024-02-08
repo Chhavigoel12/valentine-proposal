@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Proposal</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #FF6B6B, #FFD166);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        #options {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .option-button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: 2px solid #fff;
+            background-color: transparent;
+            color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .option-button:hover {
+            background-color: #fff;
+            color: #FF6B6B;
+        }
+        #flowers {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <img id="flowers" src="https://source.unsplash.com/1920x1080/?flowers" alt="Flowers Background">
+    <h1>Will You Be My Valentine?</h1>
+    <div id="options">
+        <button class="option-button" onclick="reply('yes')">YES</button>
+        <button class="option-button" onclick="reply('no')">NO</button>
+    </div>
+
+    <script>
+        // Function to handle user's response
+        function reply(response) {
+            if (response === 'yes') {
+                alert("Yay! I'm so happy! ❤️");
+            } else {
+                alert("Oh no! Maybe next time. 😔");
+            }
+        }
+    </script>
+</body>
+</html>
